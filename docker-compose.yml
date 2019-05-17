@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+
+  angular-app:
+    image: angular-app
+    build:
+      context: ./first-nation-demo
+    ports:
+      - "5000:80"
+    networks:
+      - fnd-net
+    restart: always
+
+networks:
+  fnd-net:
+    driver: "bridge"
