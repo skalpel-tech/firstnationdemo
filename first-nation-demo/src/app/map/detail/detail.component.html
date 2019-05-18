@@ -1,0 +1,55 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">{{ firstNationProperties.FIRST_NATION_FEDERAL_NAME }}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="onCancel()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td scope="row">FIRST NATION FEDERAL NAME</td>
+        <td>{{ firstNationProperties.FIRST_NATION_FEDERAL_NAME }}</td>
+      </tr>
+      <tr>
+        <td scope="row">URL TO BC WEBSITE</td>
+        <td><a [href]="firstNationProperties.URL_TO_BC_WEBSITE"
+            target="_blank">{{firstNationProperties.FIRST_NATION_FEDERAL_NAME}} (BC)</a></td>
+      </tr>
+      <tr>
+        <td scope="row">URL TO FEDERAL WEBSITE</td>
+        <td><a [href]="firstNationProperties.URL_TO_FEDERAL_WEBSITE"
+            target="_blank">{{firstNationProperties.FIRST_NATION_FEDERAL_NAME}} (Federal)</a></td>
+      </tr>
+      <tr>
+        <td scope="row">URL TO FIRST NATION WEBSITE</td>
+        <td><a [href]="firstNationProperties.URL_TO_FIRST_NATION_WEBSITE"
+            target="_blank">{{firstNationProperties.FIRST_NATION_FEDERAL_NAME}} (First Nation)</a></td>
+      </tr>
+      <tr>
+        <td scope="row">MEMBER ORGANIZATION NAMES</td>
+        <td>{{firstNationProperties.MEMBER_ORGANIZATION_NAMES}}</td>
+      </tr>
+      <tr>
+        <td scope="row">LANGUAGE GROUP</td>
+        <td>{{firstNationProperties.LANGUAGE_GROUP}}</td>
+      </tr>
+      <tr>
+        <td scope="row">BC REGIONAL OFFICE</td>
+        <td>{{firstNationProperties.BC_REGIONAL_OFFICE}}</td>
+      </tr>
+      <tr>
+        <td scope="row">LOCATION DESCRIPTION</td>
+        <td>{{firstNationProperties.LOCATION_DESCRIPTION}}</td>
+      </tr>
+      <tr>
+        <td scope="row">COMMENTS</td>
+        <td>{{firstNationProperties.COMMENTS}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
+<div class="modal-footer">
+</div>
