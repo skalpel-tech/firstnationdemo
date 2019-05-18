@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { MapRoutingModule } from './map-routing.module';
 import { IndexComponent } from './index/index.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 @NgModule({
   declarations: [IndexComponent],
   imports: [
     CommonModule,
-    MapRoutingModule
+    MapRoutingModule,
+    LeafletModule
   ]
 })
 export class MapModule { }
