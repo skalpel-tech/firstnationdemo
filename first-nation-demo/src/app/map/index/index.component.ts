@@ -26,16 +26,21 @@ export class IndexComponent implements OnInit {
   onMapReady(map: L.Map) {
 
     geoJSON(MockFirstnationData, {
-        pointToLayer: function (feature, latlng) {
-            return circleMarker(latlng, {
-              radius: 8,
-              fillColor: "#ff7800",
-              color: "#000",
-              weight: 1,
-              opacity: 1,
-              fillOpacity: 0.8
-            });
-        }
+      pointToLayer: function (feature, latlng) {
+          return circleMarker(latlng, {
+            radius: 8,
+            fillColor: "#ff7800",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+          });
+      },
+      onEachFeature: function(feature, layer) {
+        layer.on('click', function(element) {
+          alert(JSON.stringify(element['sourceTarget']['feature']['properties']));
+        })
+      }
     }).addTo(map);
   }
 
