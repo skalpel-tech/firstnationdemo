@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+
 import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
@@ -14,7 +17,8 @@ import { HeaderComponent } from './shared/header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LeafletModule.forRoot()
+    LeafletModule.forRoot(),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
